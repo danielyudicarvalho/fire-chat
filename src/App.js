@@ -42,12 +42,17 @@ function App() {
 function SignIn(){
   const signInWithGoogle = ()=>{
     const provider = new firebase.auth.GoogleAuthProvider();
-    const faceProvider = new firebase.auth.FacebookAuthProvider()
     auth.signInWithPopup(provider);
+  }
+
+  const signInWithFacebook = ()=>{
+    const faceProvider = new firebase.auth.FacebookAuthProvider()
+    auth.signInWithPopup(faceProvider);
   }
     return(
       <>  
-        <button className="sign-In" onClick={signInWithGoogle}>SignIn</button>
+        <button className="sign-In" onClick={signInWithGoogle}>SignIn with Google</button>
+        <button className="sign-In" onClick={signInWithFacebook}>SignIn with Facebook</button>
         <p>Do not violate the community guidelines or you will be banned for life!</p>
       </>
     )
