@@ -1,3 +1,3 @@
 #### Fire-Chat
 
-A Simple chat using expo, react-native and firebase
+A Simple chat using Expo, React-Native and Firebase
